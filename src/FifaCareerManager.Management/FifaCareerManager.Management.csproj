@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <!--<TargetFramework>netcoreapp3.1</TargetFramework>--> 
+    <!--
+      Need to find out why the System.Windows.Data namespace is not available when the target framework is .NET Core 3.1, 
+      even though the documentation and a few google attempts show that it should be.
+    -->
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>FifaCareerManager.Management</AssemblyName>
+    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+    <Product>FifaCareerManager.Management</Product>
+    <Authors>Dennis Dervisis</Authors>
+    <Description />
+    <Copyright>Copyright © Dennis Dervisis 2020</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+
+</Project>

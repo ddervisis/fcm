@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCareerManager.UI", "src\FifaCareerManager.UI\FifaCareerManager.UI.csproj", "{492208C9-CBD7-42F3-9D18-D433C67FC808}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifaCareerManager.Management", "src\FifaCareerManager.Management\FifaCareerManager.Management.csproj", "{022E11CD-29E8-4B7D-86C9-7ECD18723BC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{492208C9-CBD7-42F3-9D18-D433C67FC808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492208C9-CBD7-42F3-9D18-D433C67FC808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492208C9-CBD7-42F3-9D18-D433C67FC808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492208C9-CBD7-42F3-9D18-D433C67FC808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022E11CD-29E8-4B7D-86C9-7ECD18723BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022E11CD-29E8-4B7D-86C9-7ECD18723BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022E11CD-29E8-4B7D-86C9-7ECD18723BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022E11CD-29E8-4B7D-86C9-7ECD18723BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54023C6C-84E0-4866-8277-15E95732FA4C}
+	EndGlobalSection
+EndGlobal

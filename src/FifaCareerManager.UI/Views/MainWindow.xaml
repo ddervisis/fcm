@@ -1,0 +1,47 @@
+﻿<mah:MetroWindow  
+        x:Class="FifaCareerManager.Views.MainWindow"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Fifa Career Manager" 
+        Height="250" 
+        Width="700" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="ThreeDBorderWindow">
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="OpenGithub" ToolTip="Open GitHub repository">
+                <iconPacks:PackIconModern Width="22" Height="22" Kind="SocialGithubOctocat"/>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button ToolTip="Save">
+                <iconPacks:PackIconFontAwesome Width="22" Height="22" Kind="SaveRegular" />
+            </Button>
+            <Button ToolTip="Open">
+                <iconPacks:PackIconFontAwesome Width="22" Height="22" Kind="FolderOpenRegular" />
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    <Grid>
+        <mah:MetroTabControl>
+            <TabItem Header="Youth Players">
+                <Grid>
+                    <Frame Content="Frame" NavigationUIVisibility="Hidden" Source="/Views/YouthPlayerOverview.xaml"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Retiring Players">
+                <Grid>
+                    <Frame Content="Frame" NavigationUIVisibility="Hidden" Source="/Views/RetiringPlayerOverview.xaml"/>
+                </Grid>
+            </TabItem>
+        </mah:MetroTabControl>
+    </Grid>
+</mah:MetroWindow>
