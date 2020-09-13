@@ -12,6 +12,7 @@
         Width="700" 
         WindowStartupLocation="CenterScreen" 
         ResizeMode="CanResizeWithGrip"
+        SizeToContent="WidthAndHeight"
         WindowStyle="ThreeDBorderWindow">
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
@@ -20,16 +21,6 @@
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
-    <!--<mah:MetroWindow.RightWindowCommands>
-        <mah:WindowCommands>
-            <Button ToolTip="Save">
-                <iconPacks:FontAwesome Width="18" Height="18" Kind="SaveRegular" />
-            </Button>
-            <Button ToolTip="Open">
-                <iconPacks:FontAwesome Width="18" Height="18" Kind="FolderOpenRegular" />
-            </Button>
-        </mah:WindowCommands>
-    </mah:MetroWindow.RightWindowCommands>-->
     <Grid>
         <mah:MetroTabControl>
             <mah:MetroTabItem Header="Youth Players">
