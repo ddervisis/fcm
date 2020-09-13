@@ -23,18 +23,14 @@ namespace FifaCareerManager.Management.IO
         /// <returns></returns>
         public static string OpenFile(string playerType)
         {
-            try
-            {
-                if (!Directory.Exists(applicationFolder))
-                {
-                    Directory.CreateDirectory(applicationFolder);
-                }
-                return File.ReadAllText(Path.Combine(applicationFolder, $@"{playerType}.json"));
-            }
-            catch (FileNotFoundException)
-            {
-                return string.Empty;
-            }
+            string fileName = Path.Combine(applicationFolder, $@"{playerType}.json");
+
+            if (!Directory.Exists(applicationFolder))
+                Directory.CreateDirectory(applicationFolder);
+            if (!File.Exists(fileName))
+                File.Create(fileName).Dispose();
+
+            return File.ReadAllText(fileName);
         }
 
         /// <summary>
@@ -45,9 +41,8 @@ namespace FifaCareerManager.Management.IO
         public static void SaveFile(string playerType, string playerData)
         {
             if (!Directory.Exists(applicationFolder))
-            {
                 Directory.CreateDirectory(applicationFolder);
-            }
+
             File.WriteAllText(Path.Combine(applicationFolder, $@"{playerType}.json"), playerData);
         }
     }
