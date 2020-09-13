@@ -15,33 +15,33 @@
         WindowStyle="ThreeDBorderWindow">
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <Button Click="OpenGithub" ToolTip="Open GitHub repository">
-                <iconPacks:PackIconModern Width="22" Height="22" Kind="SocialGithubOctocat"/>
+            <Button Click="OpenGithub" ToolTip="Report a bug">
+                <iconPacks:FontAwesome Width="18" Height="18" Kind="GithubAltBrands"/>
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
-    <mah:MetroWindow.RightWindowCommands>
+    <!--<mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
             <Button ToolTip="Save">
-                <iconPacks:PackIconFontAwesome Width="22" Height="22" Kind="SaveRegular" />
+                <iconPacks:FontAwesome Width="18" Height="18" Kind="SaveRegular" />
             </Button>
             <Button ToolTip="Open">
-                <iconPacks:PackIconFontAwesome Width="22" Height="22" Kind="FolderOpenRegular" />
+                <iconPacks:FontAwesome Width="18" Height="18" Kind="FolderOpenRegular" />
             </Button>
         </mah:WindowCommands>
-    </mah:MetroWindow.RightWindowCommands>
+    </mah:MetroWindow.RightWindowCommands>-->
     <Grid>
         <mah:MetroTabControl>
-            <TabItem Header="Youth Players">
+            <mah:MetroTabItem Header="Youth Players">
                 <Grid>
                     <Frame Content="Frame" NavigationUIVisibility="Hidden" Source="/Views/YouthPlayerOverview.xaml"/>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Retiring Players">
+            </mah:MetroTabItem>
+            <mah:MetroTabItem Header="Retiring Players">
                 <Grid>
                     <Frame Content="Frame" NavigationUIVisibility="Hidden" Source="/Views/RetiringPlayerOverview.xaml"/>
                 </Grid>
-            </TabItem>
+            </mah:MetroTabItem>
         </mah:MetroTabControl>
     </Grid>
 </mah:MetroWindow>

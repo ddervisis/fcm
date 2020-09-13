@@ -19,10 +19,5 @@ namespace FifaCareerManager.Management.Models
         /// </summary>
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public PositionMapping.Position Position { get; set; }
-
-        /// <summary>
-        /// The age of the player.
-        /// </summary>
-        public int Age { get; set; }
     }
 }

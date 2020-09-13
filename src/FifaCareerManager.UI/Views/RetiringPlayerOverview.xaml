@@ -14,11 +14,9 @@
     <Page.Resources>
         <Converters:DataGridItemConverter x:Key="dataGridItemConverter"/>
     </Page.Resources>
-
     <Grid>
         <DataGrid
-            x:Name="DataGridRetiringPlayers"
-            ItemsSource="{Binding RetiringPlayers, Mode=OneWay}"
+            ItemsSource="{Binding RetiringPlayers, Mode=TwoWay}"
             SelectedItem="{Binding SelectedPlayer, Mode=TwoWay, Converter={StaticResource dataGridItemConverter}}"
             SelectionMode="Single"
             CanUserReorderColumns="False"

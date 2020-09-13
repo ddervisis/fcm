@@ -25,5 +25,10 @@
         /// The maximum potential of the player.
         /// </summary>
         public int MaxPotential { get; set; }
+
+        /// <summary>
+        /// The age of the player.
+        /// </summary>
+        public int Age { get; set; }
     }
 }

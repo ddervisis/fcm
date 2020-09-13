@@ -11,7 +11,7 @@ namespace FifaCareerManager.Management.IO
         /// <summary>
         /// The data folder of the application, which is used to save the player data.
         /// </summary>
-        static readonly string applicationFolder = Path.Combine(
+        private static readonly string applicationFolder = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
             AppDomain.CurrentDomain.FriendlyName
             );

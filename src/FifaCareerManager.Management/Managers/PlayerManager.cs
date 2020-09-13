@@ -1,6 +1,4 @@
-﻿/// Not completely in use yet.
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FifaCareerManager.Management.IO;
 using FifaCareerManager.Management.Serializers;
 
@@ -21,7 +19,7 @@ namespace FifaCareerManager.Management.Managers
         /// </summary>
         public PlayerManager()
         {
-            PlayerList = GetPlayers(typeof(T).Name);
+            PlayerList = GetPlayers();
         }
 
         /// <summary>
@@ -36,16 +34,24 @@ namespace FifaCareerManager.Management.Managers
         /// <summary>
         /// Retrieves the players.
         /// </summary>
-        /// <typeparam name="T">The specific type of player</typeparam>
         /// <returns>A <typeparamref name="T"/> representation of the JSON value.</returns>
-        private static List<T> GetPlayers(string playerType)
+        private static List<T> GetPlayers()
         {
-            var jsonString = FileManagement.OpenFile(playerType);
-            if (!string.IsNullOrWhiteSpace(jsonString))
+            string jsonData = FileManagement.OpenFile(typeof(T).Name);
+            if (!string.IsNullOrWhiteSpace(jsonData))
             {
-                return PlayerSerializer.DeserializePlayers<List<T>>(jsonString);
+                return PlayerSerializer.DeserializePlayers<List<T>>(jsonData);
             }
             return new List<T>();
+        }
+
+        /// <summary>
+        /// Saves the players.
+        /// </summary>
+        public void SavePlayers()
+        {
+            var jsonData = PlayerSerializer.SerializePlayers(PlayerList);
+            FileManagement.SaveFile(typeof(T).Name, jsonData);
         }
 
         /// <summary>

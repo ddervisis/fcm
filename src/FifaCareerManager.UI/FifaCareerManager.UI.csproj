@@ -14,6 +14,7 @@
     <Description />
     <Copyright>Copyright © Dennis Dervisis 2020</Copyright>
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <WebPage>https://github.com/ddervisis/fcm</WebPage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
